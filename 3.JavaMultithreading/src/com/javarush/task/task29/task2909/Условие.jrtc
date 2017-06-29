@@ -1,0 +1,92 @@
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big15">
+<h3>Рефакторинг (15)</h3>
+<p><strong>Отлично</strong>. Ты освоил основные методы рефакторинга: <em>Подъем поля, Подъем метода,</em><br />
+<em> Инкапсуляция коллекции, Извлечение подкласса, Подъем тела конструктора, Спуск</em><br />
+<em> метода, Спуск поля, Извлечение интерфейса, Свертывание иерархии, Замена наследования</em><br />
+<em> делегированием, Извлечение суперкласса, Замена простого поля объектом, Создание</em><br />
+<em> шаблонного метода, Замена делегирования наследованием, Переименование метода,</em><br />
+<em> Замена параметра набором специализированных методов, Добавление параметра,</em><br />
+<em> Удаление параметра, Разделение запроса и модификатора, Параметризация метода,</em><br />
+<em> Передача всего объекта, Замена параметра вызовом метода, Замена параметров</em><br />
+<em> объектом, Удаление сеттера, Сокрытие метода, Замена исключения проверкой условия,</em><br />
+<em> Удаление управляющего флага, Самоинкапсуляция поля, Замена поля-массива объектом,</em><br />
+<em> Инкапсуляция поля, Замена кодирования типа классом, Замена конструктора фабричным</em><br />
+<em> методом, Замена кода ошибки исключением, Разбиение условного оператора,</em><br />
+<em> Объединение условных операторов, Объединение дублирующихся фрагментов в условных</em><br />
+<em> операторах, Замена магического числа символьной константой, Замена условного</em><br />
+<em> оператора полиморфизмом, Извлечение метода, Встраивание метода, Перемещение</em><br />
+<em> метода, Расщепление переменной, Удаление присваиваний параметрам, Перемещение</em><br />
+<em> поля, Извлечение класса, Встраивание класса и Сокрытие делегирования</em>.</p>
+<p>Конечно есть еще и другие, обязательно ознакомься и с ними. Очень важно не только<br />
+уметь применять <strong>методы</strong> <strong>рефакторинга</strong>, но и <strong>видеть</strong> <strong>места</strong>, где их <strong>нужно</strong> <strong>применить</strong>. По<br />
+мере возрастания опыта, такие места будет все проще и проще находить. Мартин Фаулер в<br />
+своей книге &#171;Р<em><strong>ефакторинг: Улучшение существующего кода</strong></em>&#187; называет такие места &#171;<em><strong>код с</strong></em><br />
+<em><strong> душком</strong></em>&#171;. Обязательно прочитай про основные варианты &#171;<em><strong>кода с душком</strong></em>&#171;. Желаю, чтобы<br />
+твой код пах хорошо!</p>
+
+<hr>
+<h3>Рефакторинг (14)</h3>
+<p>14.1. Перемещение поля. Замени поля <mark class="user">isManAnya</mark> и <mark class="user">isManRoma</mark> полем man в нужном классе.<br />
+Добавь <strong>сеттер</strong> и <strong>геттер</strong> для нового поля (<em>при выборе имен методов учти тип поля</em>).<br />
+14.2. Извлечение класса.<br />
+14.2.1. Добавь класс <strong><span class="text-corporate">Address</span></strong> в пакет <strong><span class="text-red">user</span></strong>.<br />
+14.2.2. Перенеси поля <mark class="user">country</mark>, <mark class="user">city</mark> и <mark class="user">house</mark> в новый класс.<br />
+14.2.3. Добавь <strong>сеттеры</strong> и <strong>геттеры</strong> для них.<br />
+14.2.4. Перепиши класс <strong><span class="text-corporate">User</span></strong>, используя поле класса <strong><span class="text-corporate">Address</span></strong> <mark class="user">address</mark>.<br />
+14.3. Встраивание класса. Класс <strong><span class="text-corporate">House</span></strong> почти ничего не делает, избавься от него.<br />
+14.4. Сокрытие делегирования.<br />
+14.4.1. Добавь в класс <strong><span class="text-corporate">User</span></strong> метод <mark>getBoss()</mark>.<br />
+14.4.2. Перепиши реализацию метода <mark>getBossName(User <strong>user</strong>)</mark> класса <span class="text-corporate"><strong>UserHelper</strong></span>.</p>
+
+<hr>
+<h3>Рефакторинг (13)</h3>
+<p>Разберись с кодом пакета <strong><span class="text-red">user</span></strong> (<em>пользователь</em>).<br />
+13.1. Извлечение метода. Добавь метод <mark>printInfo()</mark>, который будет выводить <strong>имя</strong> и <strong>фамилию</strong><br />
+в консоль так же, как это делается в методе <mark>printUsers()</mark>. Замени повторяющийся код<br />
+метода <mark>printUsers()</mark> его вызовом.<br />
+13.2. Встраивание метода. Избавься от метода <mark>ageLessThan16()</mark>.<br />
+13.3. Перемещение метода. Перемести методы <mark>printInfo()</mark> и <mark>printAdditionalInfo()</mark> в класс <span class="text-corporate"><strong>User</strong></span>.<br />
+13.4. Расщепление переменной. Переменная age в методе <mark>calculateAverageAge() </mark>используется для разных промежуточных значений. Перепиши метод без использования этой переменной.<br />
+13.5. Удаление присваиваний параметрам. Перепиши метод <mark>calculateRate()</mark>, чтобы он не<br />
+пытался менять входные параметры, а просто возвращал рассчитанное значение.</p>
+
+<hr>
+<h3>Рефакторинг (12)</h3>
+<p>12.1. Объединение условных операторов.<br />
+12.1.1. Добавь внутренний метод, сообщающий, могут ли быть перевезены пассажиры<br />
+<mark>boolean canPassengersBeTransferred()</mark> в класс <span class="text-corporate"><strong>Car</strong></span>. Метод должен возвращать <span class="text-neon"><strong>true</strong></span>, если<br />
+водитель доступен <mark>isDriverAvailable</mark> и есть топливо <mark class="user">fuel</mark>.<br />
+12.1.2. Перепиши метод <mark>getNumberOfPassengersCanBeTransferred()</mark>, объединив условные<br />
+операторы (<em>используй метод</em> <mark>canPassengersBeTransferred()</mark>).<br />
+12.2. Объединение дублирующихся фрагментов в условных операторах. Перепиши метод<br />
+<mark>startMoving()</mark>, чтобы в нем не было повторяющихся вызовов функций.<br />
+12.3. Замена магического числа символьной константой. Замени магические числа в методе<br />
+<mark>getMaxSpeed()</mark> на константные переменные метода: <mark class="green">MAX_TRUCK_SPEED</mark>,<br />
+<mark class="green">MAX_SEDAN_SPEED</mark> и <mark class="green">MAX_CABRIOLET_SPEED</mark>.<br />
+12.4. Замена условного оператора полиморфизмом.<br />
+12.4.1. Переопредели метод <mark>getMaxSpeed()</mark> в подклассах, избавившись от условного оператора.<br />
+12.4.2. Метод <mark>getMaxSpeed()</mark> в классе <span class="text-corporate"><strong>Car</strong></span> сделай абстрактным.</p>
+
+<hr>
+<h3>Рефакторинг (11)</h3>
+<p>11.1. Замена кода ошибки исключением. Перепиши метод заправиться <mark>fill(double</mark><br />
+<mark><strong> numberOfLiters</strong>)</mark>, чтобы он в случае ошибки кидал исключение <mark class="green">Exception</mark>.<br />
+11.2. Разбиение условного оператора.<br />
+11.2.1. Добавь и реализуй метод в классе <strong><span class="text-corporate">Car</span></strong>, определяющий относится ли переданная дата к<br />
+лету: <mark>boolean isSummer(Date <strong>date</strong> , Date <strong>summerStart</strong>, Date <strong>summerEnd</strong>)</mark>.<br />
+11.2.2. Добавь и реализуй метод, рассчитывающий расход топлива зимой: <mark>double</mark><br />
+<mark> getWinterConsumption(int <strong>length</strong>)</mark>.<br />
+11.2.3. Добавь и реализуй метод, рассчитывающий расход топлива летом: <mark>double</mark><br />
+<mark> getSummerConsumption(int <strong>length</strong>)</mark>.<br />
+11.2.4. Перепиши метод <mark>getTripConsumption()</mark>, используя новые методы.</p>
+
+<hr>
+<h3>Рефакторинг (10)</h3>
+<p>Разберись с кодом в пакете <strong><span class="text-red">car</span></strong> (<em><strong>машина</strong></em>).<br />
+10.1. Замена конструктора фабричным методом.<br />
+10.1.1. Объяви классы <strong><span class="text-corporate">Truck</span></strong> (<strong>грузовик</strong>), <strong><span class="text-corporate">Sedan</span></strong> (<strong>седан</strong>) и <span class="text-corporate"><strong>Cabriolet</strong></span> (<strong>кабриолет</strong>), унаследованные от <strong><span class="text-corporate">Car</span></strong>.<br />
+10.1.2. Добавь в них конструкторы, принимающие <mark>int numberOfPassengers</mark>.<br />
+10.1.3. Добавь фабричный статический метод <mark>Car create(int type, int <strong>numberOfPassengers</strong>)</mark> в класс <strong><span class="text-corporate">Car</span></strong> и реализуй его.<br />
+10.1.4. Измени область видимости конструктора класса <span class="text-corporate"><strong>Car</strong></span>.</p>
+
+</div>
